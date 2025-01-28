@@ -32,3 +32,24 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    var navbar = document.getElementById('navbarResponsive');
+
+    // Fonction pour vérifier si la barre de navigation est ouverte
+    function isNavbarOpen() {
+        return navbar.classList.contains('show');
+    }
+
+    // Fonction pour ouvrir la barre de navigation
+    function openNavbar() {
+        if (!isNavbarOpen()) {
+            navbar.classList.add('show');
+        }
+    }
+
+    // Écouteur d'événement pour détecter les changements de traduction
+    document.getElementById('google_translate_element').addEventListener('click', function() {
+        setTimeout(openNavbar, 500); // Attendre un peu pour que la traduction se termine
+    });
+});
