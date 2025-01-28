@@ -10973,35 +10973,32 @@ section.resume-section .resume-section-content {
   }
 }
 
-/* Styles pour le conteneur de l'élément de traduction */
-#google_translate_element_container {
-  margin: 10px;
-  padding: 10px;
-  background-color: #f8f9fa;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-
-/* Styles pour l'élément de traduction de Google */
+/* Styliser le conteneur du widget */
 #google_translate_element {
-  display: inline-block;
-  vertical-align: middle;
+  width: 200px; /* Largeur du conteneur */
+  margin: 20px auto; /* Marges pour centrer le conteneur */
+  padding: 10px; /* Padding interne */
+  border: 1px solid #ccc; /* Bordure */
+  border-radius: 5px; /* Coins arrondis */
+  background-color: #f9f9f9; /* Couleur de fond */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre */
 }
 
-/* Styles pour les éléments générés par Google Translate */
-.goog-te-gadget {
-  color: transparent !important;
+/* Masquer le texte "Google Translate" */
+.goog-te-gadget-simple {
+  display: none !important;
 }
 
-.goog-te-gadget .goog-te-combo {
-  color: #000 !important;
-  background-color: #fff !important;
-  border: 1px solid #ccc !important;
-  border-radius: 4px !important;
-  padding: 5px !important;
-  margin: 5px !important;
+/* Styliser le bouton de traduction (si possible) */
+.goog-te-gadget-simple {
+  background-color: #fff !important; /* Couleur de fond du bouton */
+  border: 1px solid #ccc !important; /* Bordure du bouton */
+  border-radius: 5px !important; /* Coins arrondis du bouton */
+  padding: 5px !important; /* Padding interne du bouton */
 }
 
-.goog-te-gadget .goog-te-combo:hover {
-  background-color: #f0f0f0 !important;
+/* Styliser le texte du bouton de traduction (si possible) */
+.goog-te-gadget-simple span {
+  color: #333 !important; /* Couleur du texte */
+  font-size: 14px !important; /* Taille du texte */
 }
