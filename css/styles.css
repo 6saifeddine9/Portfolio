@@ -10972,6 +10972,7 @@ section.resume-section .resume-section-content {
     padding-bottom: 5rem;
   }
 }
+
 /* Styliser le conteneur du widget */
 #google_translate_element {
   width: 200px; /* Largeur du conteneur */
@@ -10983,11 +10984,14 @@ section.resume-section .resume-section-content {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre */
 }
 
-/* Masquer le logo de Google Traduction */
-.goog-logo-link {
+/* Masquer le texte "Google Translate" */
+.goog-te-gadget-simple {
   display: none !important;
 }
 
+.goog-logo-link {
+  display: none !important;
+}
 .goog-te-gadget img {
   display: none !important;
 }
