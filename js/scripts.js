@@ -30,16 +30,24 @@ window.addEventListener('DOMContentLoaded', event => {
     function openNavbar() {
         if (!isNavbarOpen()) {
             navbar.classList.add('show');
+            console.log('Navbar opened');
         }
     }
 
     // Écouteur d'événement pour détecter les changements de traduction
-    document.getElementById('google_translate_element').addEventListener('click', function() {
-        setTimeout(openNavbar, 500); // Attendre un peu pour que la traduction se termine
-    });
+    const translateElement = document.getElementById('google_translate_element');
+    if (translateElement) {
+        translateElement.addEventListener('click', function() {
+            console.log('Translation element clicked');
+            setTimeout(openNavbar, 500); // Attendre un peu pour que la traduction se termine
+        });
+    } else {
+        console.error('Google Translate element not found');
+    }
 
     // Écouteur d'événement pour détecter la fin de la traduction
     window.addEventListener('google-translate-finished', function() {
+        console.log('Translation finished');
         openNavbar();
     });
 });
