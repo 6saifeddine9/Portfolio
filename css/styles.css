@@ -10972,3 +10972,36 @@ section.resume-section .resume-section-content {
     padding-bottom: 5rem;
   }
 }
+
+/* Styles pour le conteneur de l'élément de traduction */
+#google_translate_element_container {
+  margin: 10px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Styles pour l'élément de traduction de Google */
+#google_translate_element {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Styles pour les éléments générés par Google Translate */
+.goog-te-gadget {
+  color: transparent !important;
+}
+
+.goog-te-gadget .goog-te-combo {
+  color: #000 !important;
+  background-color: #fff !important;
+  border: 1px solid #ccc !important;
+  border-radius: 4px !important;
+  padding: 5px !important;
+  margin: 5px !important;
+}
+
+.goog-te-gadget .goog-te-combo:hover {
+  background-color: #f0f0f0 !important;
+}
