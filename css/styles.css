@@ -10972,3 +10972,22 @@ section.resume-section .resume-section-content {
     padding-bottom: 5rem;
   }
 }
+
+/* Afficher le message uniquement sur les écrans de taille mobile */
+@media (max-width: 767px) {
+  .mobile-message {
+      display: block;
+      text-align: center;
+      background-color: #f8d7da;
+      color: #721c24;
+      padding: 10px;
+      margin-bottom: 20px;
+  }
+}
+
+/* Masquer le message sur les écrans de taille desktop */
+@media (min-width: 768px) {
+  .mobile-message {
+      display: none;
+  }
+}
