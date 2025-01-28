@@ -10972,35 +10972,47 @@ section.resume-section .resume-section-content {
     padding-bottom: 5rem;
   }
 }
-
-/* Styliser le conteneur du widget */
+/* Conteneur du widget */
 #google_translate_element {
-  width: 200px; /* Largeur du conteneur */
-  margin: 20px auto; /* Marges pour centrer le conteneur */
-  padding: 10px; /* Padding interne */
-  border: 1px solid #ccc; /* Bordure */
-  border-radius: 5px; /* Coins arrondis */
-  background-color: #f9f9f9; /* Couleur de fond */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre */
+  width: 250px; /* Largeur ajustée */
+  margin: 20px auto; /* Centrage horizontal */
+  padding: 15px; /* Espacement interne augmenté */
+  border: 2px solid #007BFF; /* Bordure avec une couleur bleue moderne */
+  border-radius: 10px; /* Coins arrondis plus visibles */
+  background-color: #f8faff; /* Couleur de fond subtile */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Ombre douce */
+  text-align: center; /* Centrer le contenu */
+  font-family: 'Arial', sans-serif; /* Police propre et lisible */
 }
 
 /* Masquer le texte "Google Translate" */
 .goog-te-gadget-simple {
-  display: none !important;
+  display: flex !important;
+  justify-content: center; /* Centrer le bouton */
+  align-items: center;
+  padding: 10px !important;
+  background-color: #007BFF !important; /* Bleu vif */
+  color: white !important; /* Texte blanc pour un bon contraste */
+  font-weight: bold !important; /* Texte gras */
+  border-radius: 10px !important; /* Coins arrondis */
+  transition: background-color 0.3s ease !important; /* Animation au survol */
+  text-decoration: none;
+  border: none !important;
 }
 
-
-
-/* Styliser le bouton de traduction (si possible) */
-.goog-te-gadget-simple {
-  background-color: #fff !important; /* Couleur de fond du bouton */
-  border: 1px solid #ccc !important; /* Bordure du bouton */
-  border-radius: 5px !important; /* Coins arrondis du bouton */
-  padding: 5px !important; /* Padding interne du bouton */
+/* Effet de survol */
+.goog-te-gadget-simple:hover {
+  background-color: #0056b3 !important; /* Bleu plus foncé au survol */
 }
 
-/* Styliser le texte du bouton de traduction (si possible) */
+/* Styliser le texte à l'intérieur du bouton */
 .goog-te-gadget-simple span {
-  color: #333 !important; /* Couleur du texte */
-  font-size: 14px !important; /* Taille du texte */
+  color: white !important;
+  font-size: 16px !important; /* Texte légèrement plus grand */
+  line-height: 1.5; /* Espacement du texte */
+}
+
+/* Modifier la flèche déroulante si possible */
+.goog-te-gadget-icon {
+  display: none !important; /* Masquer l'icône */
 }
