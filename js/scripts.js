@@ -1,14 +1,4 @@
-/*!
-* Start Bootstrap - Resume v7.0.6 (https://startbootstrap.com/theme/resume)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-resume/blob/master/LICENSE)
-*/
-//
-// Scripts
-// 
-
 window.addEventListener('DOMContentLoaded', event => {
-
     // Activate Bootstrap scrollspy on the main nav element
     const sideNav = document.body.querySelector('#sideNav');
     if (sideNav) {
@@ -31,11 +21,6 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    var navbar = document.getElementById('navbarResponsive');
-
     // Fonction pour vérifier si la barre de navigation est ouverte
     function isNavbarOpen() {
         return navbar.classList.contains('show');
@@ -51,5 +36,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Écouteur d'événement pour détecter les changements de traduction
     document.getElementById('google_translate_element').addEventListener('click', function() {
         setTimeout(openNavbar, 500); // Attendre un peu pour que la traduction se termine
+    });
+
+    // Écouteur d'événement pour détecter la fin de la traduction
+    window.addEventListener('google-translate-finished', function() {
+        openNavbar();
     });
 });
