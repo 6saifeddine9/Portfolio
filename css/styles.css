@@ -10972,9 +10972,3 @@ section.resume-section .resume-section-content {
     padding-bottom: 5rem;
   }
 }
-@media (max-width: 767.98px) {
-  #google_translate_element {
-      display: block;
-      width: 100%;
-  }
-}
