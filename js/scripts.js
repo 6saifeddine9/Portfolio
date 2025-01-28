@@ -27,4 +27,14 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+    // Close the navbar when clicking outside of it
+    document.addEventListener('click', (event) => {
+        const isNavbarOpen = navbarToggler.getAttribute('aria-expanded') === 'true';
+        const isClickInsideNavbar = sideNav.contains(event.target) || event.target.closest('#google_translate_element');
+
+        if (isNavbarOpen && !isClickInsideNavbar) {
+            navbarToggler.click();
+        }
+    });
+
 });
