@@ -31,7 +31,12 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projets</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Compétences</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Certifications</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#" id="google_translate_element"></a></li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#" id="google_translate_element_link">
+                            <div id="google_translate_element"></div>
+                        </a>
+                    </li>
+                    
                 </ul>
             </div>
         </nav>
@@ -353,14 +358,17 @@
         <!-- Google Translate Script -->
         <script type="text/javascript">
             document.addEventListener('DOMContentLoaded', function() {
+                var translateElementLink = document.getElementById('google_translate_element_link');
                 var translateElement = document.getElementById('google_translate_element');
                 var navbarToggler = document.querySelector('.navbar-toggler');
                 var navbarCollapse = document.querySelector('.navbar-collapse');
         
-                translateElement.addEventListener('click', function(event) {
+                // Empêcher la fermeture du menu de navigation lorsque vous interagissez avec l'élément de traduction
+                translateElementLink.addEventListener('click', function(event) {
                     event.stopPropagation();
                 });
         
+                // Gérer l'ouverture et la fermeture du menu de navigation
                 navbarToggler.addEventListener('click', function() {
                     if (navbarCollapse.classList.contains('show')) {
                         navbarCollapse.classList.remove('show');
@@ -369,6 +377,7 @@
                     }
                 });
         
+                // Fermer le menu de navigation lorsque vous cliquez en dehors de celui-ci
                 document.addEventListener('click', function(event) {
                     if (!navbarCollapse.contains(event.target) && !navbarToggler.contains(event.target)) {
                         navbarCollapse.classList.remove('show');
@@ -376,6 +385,7 @@
                 });
             });
         </script>
+        
         <script type="text/javascript">
             function googleTranslateElementInit() {
                 new google.translate.TranslateElement({pageLanguage: 'fr', includedLanguages: 'en,de,ru,es'}, 'google_translate_element');
