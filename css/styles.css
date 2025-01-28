@@ -10972,3 +10972,19 @@ section.resume-section .resume-section-content {
     padding-bottom: 5rem;
   }
 }
+#floating-translate-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #007bff;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#floating-translate-button a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+}
